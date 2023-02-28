@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const order = [{
+                   orderId: 23,
+                   totalAmount: 1224,
+                   customerName:"shivam",
+                   customerId:044,
+                   customerCity: "Alibag",
+                },
+                {   orderId: 24,
+                    totalAmount: 1345,
+                    customerName:"Ratish",
+                    customerId:045,
+                    customerCity: "Alibag",
+                },
+                {   orderId: 25,
+                    totalAmount: 1245,
+                    customerName:"shivam",
+                    customerId:044,
+                    customerCity: "Nagpur",
+                },
+                {   orderId: 26,
+                    totalAmount: 2122,
+                    customerName:"pankaj",
+                    customerId:046,
+                    customerCity: "Pune",
+                },
+                {   orderId: 27,
+                    totalAmount: 2435,
+                    customerName:"Akshay",
+                    customerId:047,
+                    customerCity: "Alibag",
+               },
+                {   orderId: 28,
+                    totalAmount: 2446,
+                    customerName:"Akshay",
+                    customerId:047,
+                    customerCity: "Pune",
+               }
+
+               ];
+
+               function create_Table(){
+                    for(i=0;order[i]!=undefined;i++){ 
+                  
+                      let tr = document.createElement('tr');
+                      let orderId = document.createElement('td')
+                      orderId.innerText=order[i].orderId
+                      let customerName = document.createElement('td')
+                      customerName.innerText = order[i].customerName
+                      let customerId= document.createElement('td')
+                      customerId.innerText= order[i].customerId
+                      let totalAmount = document.createElement('td')
+                      totalAmount.innerText= document.order[i].totalAmount
+                      let customerCity= document.createElement('td')
+                      customerCity.innerText= document.order[i].customerCity
+
+                      tr.append(orderId,customerId,customerName,totalAmount); 
+                      let table_element = document.getElementById('order_table')
+                      table_element.append(tr);
+                    } 
+
+               }
+        </script>
+        <style>
+            td,th{
+                padding: 15px;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body onload="create_Table()">
+        <table id="order_table">
+            <tr>
+                <th>Order Id</th>
+                <th>Customer Id</th>
+                <th>Customer Name</th>
+                <th>Total Amount</th>
+                <th>Customer City</th>
+            </tr>
+        </table>
+
+
+    </body>
+</html>    

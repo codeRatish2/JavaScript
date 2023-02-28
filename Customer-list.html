@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+                   let Customers = [ 
+
+{ 
+
+        name: "John", 
+
+        age: 9, 
+
+        image: "https://image.com/4221" 
+
+}, 
+
+{ 
+
+        name: "John", 
+
+        age: 9, 
+
+        image: "https://image.com/4221" 
+
+}, 
+
+{ 
+
+        name: "John", 
+
+        age: 9, 
+
+        image: "https://image.com/4221" 
+
+} 
+];
+
+function create_list(data){
+    var data = Customers;
+    var admin = data;
+    for(data of admin){
+    let Customerslist = document.createElement('li')
+    let name = document.createElement(li)
+    name.innerText= data.name
+
+    Customerslist.append(name);
+    document.getElementById('Customerlist').append(Customerslist);
+    }
+}
+        </script>
+    </head>
+    <body>
+        <table id="Customerslist">
+
+        </table>
+
+    </body>
+</html>    

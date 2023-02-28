@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script>
+        let Customers = [ 
+
+          { 
+
+           name: "John", 
+           age: 9, 
+           image: "https://image.com/4221" 
+
+           }, 
+
+           { 
+
+            name: "John", 
+            age: 9, 
+            image: "https://image.com/4221" 
+           }, 
+
+           { 
+            name: "John", 
+            age: 9, 
+            image: "https://image.com/4221" 
+           } 
+          ];
+          function Customer(){
+            for(let i=0;Customers[i]!=undefined;i++){
+              let tr = document.createElement('tr');
+              let Name = document.createElement('td')
+              Name.innerText= Customers[i].name
+              let Age = document.createElement('td')
+              Age.innerText= Customers[i].age
+              let Image = document.createElement('td')
+              Image.innerText= Customers[i].image
+ 
+             tr.append(Name,Age,Image);
+   
+             let tableelement= document.getElementById("CustomersTable")
+             tableelement.append(tr);
+
+
+            }
+          }
+        
+
+        </script>
+        <style>
+          td,th{
+          text-align: center;
+          padding: 15px;
+          border: 1px solid black;
+          
+        }
+         CustomersTable{
+          margin: auto;
+         }
+
+        </style>
+  </head>
+  <body onload="Customer()">
+      <h2> Question 2: You are provided the following Array of object:</h2>
+     <table id="CustomersTable">
+       <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Image</th>
+       </tr>
+
+     </table>
+     
+
+  
+
+
+ 
+      
+  </body>
+</html>
